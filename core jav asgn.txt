@@ -1,0 +1,536 @@
+
+01.	Write a program to print Hello World. Compile and run it using command prompt.
+public class Q1 {
+    public static void main( String[] args ) {
+        System.out.println( "Hello World!" );
+        System.exit( 0 ); //success
+    }
+}
+-----------------------------------------------------------------------------------------------------
+02.	Write a program to declare a variable named rollNo of integer type. Assign it a value (let say 100) to it and print the following statement roll no = 100 .
+
+class Q2{
+public static void main(String args[]){
+int rollno = 100;
+System.out.println("roll no = " +rollno);
+
+}
+
+
+}
+
+-----------------------------------------------------------------------------------------------------
+03.	Find the result of following expressions. You need to determine the primitive data type of the variable by looking carefully the given expression and initialize variables by any random value.
+A. y = x2 + 3x - 7 (print value of y) 
+B. y = x++ + ++x (print value of x and y) 
+C. z = x++ - --y - --x  +  x++ (print value of x ,y and z)
+D. z = x && y || !(x || y)  (print value of z) [ x, y, z are boolean variables ]
+
+class Q3{
+public static void main(String arg[]){
+int x = 1 ;
+int y = x * x + 3 * x - 7;
+System.out.println(y) ;
+y = x++ + ++x ;
+System.out.println(y );
+int z =  x++ - --y - --x  +  x++;
+
+System.out.println(z); 
+
+}
+}
+
+-----------------------------------------------------------------------------------------------------
+04.	Write a program that initializes 2 byte type of variables. Add the values of these variables and store in a byte type of variable. [Note: primitive down casting is required in this program ] .
+
+    
+
+  import java.util.Scanner;
+
+   public class Q4{
+        public static void main( String args[]){
+
+   Scanner sc = new Scanner(System.in);
+
+  byte b1 = sc.nextByte();
+  byte b2 = sc.nextByte();
+
+ byte b3 = (byte)(b1 + b2);
+     System.out.println(b3);
+}
+}
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+05.	Write a program that takes user’s name as command line argument and prints Welcome <entered user name>.
+
+import java.util.Scanner;
+class Q5{
+	public static void main(String args[]){
+	Scanner sc =new Scanner(System.in); //System.in is public static reference type
+	System.out.println("Enter ur name");
+	String nm =sc.next();
+	System.out.println("Welcome "+nm);
+}
+
+}
+
+-----------------------------------------------------------------------------------------------------
+06.	Write a program that takes radius of a circle as input. Read the entered radius using Scanner class. Then calculate and print the area and circumference of the circle.
+
+
+import java.util.Scanner;
+public class Q6
+{
+    public static void main(String[] args) 
+    {
+        int r;
+        double pi = 3.14, area;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter radius of circle:");
+        r = s.nextInt();
+        area = pi * r * r;
+        System.out.println("Area of circle:"+area);
+    }            
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+07.	Write a program to calculate sum of 5 subject’s marks & find percentage. Take the obtained marks from user using Scanner class. Output should be in this format [ percentage marks = 99 % ]. Use concatenation operator here.
+
+// Java program to find Total Average and percentage of Five Subjects
+import java.util.Scanner;
+
+public class Totalof5subjects1 {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int english, chemistry, computers, physics, maths; 
+	    float total, Percentage, Average;
+		sc = new Scanner(System.in);
+		
+		System.out.print(" Please Enter the Five Subjects Marks : ");
+		english = sc.nextInt();	
+		chemistry = sc.nextInt();	
+		computers = sc.nextInt();	
+		physics = sc.nextInt();	
+		maths = sc.nextInt();	
+		
+		total = english + chemistry + computers + physics + maths;
+		Average = total / 5;
+	    Percentage = (total / 500) * 100;
+	    
+	    System.out.println(" Total Marks =  " + total);
+	    System.out.println(" Average Marks =  " + Average);
+	    System.out.println(" Marks Percentage =  " + Percentage);
+	}
+}
+
+
+-----------------------------------------------------------------------------------------------------
+08.	Write a program to find the simple interest. Take the principle amount, rate of interest and time from user using Scanner class.
+//Java program to calculate Simple Interest.
+import java.util.*;
+ 
+public class SimpleInterest{
+ 
+    public static void main(String []args)
+    {
+        double p=0,r=0,t=0,si=0;
+         
+        //Scanner class to take user input.
+        Scanner X = new Scanner(System.in);
+         
+        System.out.print("Enter Principle : ");
+        p = X.nextFloat();
+         
+        System.out.print("Enter Rate of Interest: ");
+        r =  X.nextFloat();
+         
+        System.out.print("Enter Time in years : ");
+        t =  X.nextFloat();
+         
+        //Formula of simple interest.
+        si = (p*r*t)/100;
+         
+        System.out.print("Simple Interest is :"+si+"\n");
+                 
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------
+09.	Write a program to read the days (eg. 670 days) as integer value using Scanner class. Now convert the entered days into complete years, months and days and print them.
+
+
+import java.util.Scanner;
+public class Year_Week_Day 
+{
+    public static void main(String args[])
+    {
+        int m, year, week, day;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of days:");
+        m = s.nextInt();
+        year = m / 365;
+        m = m % 365;
+        System.out.println("No. of years:"+year);
+        week = m / 7;
+        m = m % 7;
+        System.out.println("No. of weeks:"+week);
+        day = m;
+        System.out.println("No. of days:"+day);
+    }
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+10.	Write a program to convert temperature from Fahrenheit to Celsius. Take Fahrenheit as input using Scanner class. [ formula : C= 5*(f-32)/9 ]
+
+import java.util.Scanner;
+public class Exercise1 {
+
+    public static void main(String[] Strings) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Input a degree in Fahrenheit: ");
+        double fahrenheit = input.nextDouble();
+
+        double  celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);
+        System.out.println(fahrenheit + " degree Fahrenheit is equal to " + celsius + " in Celsius");
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------
+11.	Write a program to swap two numbers without using third variable.
+import java.util.*;  
+class Swap   
+{  
+    public static void main(String a[])   
+    {   
+        System.out.println("Enter the value of x and y");  
+        Scanner sc = new Scanner(System.in);  
+        /*Define variables*/  
+        int x = sc.nextInt();  
+        int y = sc.nextInt();  
+        System.out.println("before swapping numbers: "+x +" "+ y);  
+       /*Swapping*/  
+        x = x + y;   
+        y = x - y;   
+        x = x - y;   
+        System.out.println("After swapping: "+x +"  " + y);   
+    }   
+}  
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+12.	In a company an employee is paid as under: If his basic salary is less than Rs. 10000, then HRA = 10% of basic salary and DA = 90% of basic salary. 
+If his salary is either equal to or above Rs. 10000, then HRA = Rs. 2000 and DA = 98% of basic salary. 
+If the employee's salary is input by the user write a program to find his gross salary. [ formula : GS= Basic + DA + HRA ]
+
+import java.util.Scanner;
+
+class employeesalary
+{
+ public static void main(String args[]) 
+ {
+  float basic_salary,da,hra,da1,hra1,GrossPayment;
+
+  Scanner scan=new Scanner(System.in);
+
+  System.out.println("Enter Basic Salary Of Employee: ");
+  basic_salary=scan.nextFloat();
+
+  System.out.println("Enter Basic DA Of Employee: "); 
+  da1=scan.nextFloat();
+ 
+  System.out.println("Enter Basic HRA Of Employee: ");
+  hra1=scan.nextFloat();
+
+  da = (da1 * basic_salary) / 100;
+  hra = (hra1 * basic_salary) / 100;
+
+  GrossPayment = basic_salary + da + hra;
+
+  System.out.println("Gross Salary Of Employee: "+GrossPayment);
+  }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------
+13.	Program to find greatest in 3 numbers. [ once using if else statement and then using ternary operator ( logical operator) ]  
+
+
+using if else statement :
+public class JavaExample{
+
+  public static void main(String[] args) {
+
+      int num1 = 10, num2 = 20, num3 = 7;
+
+      if( num1 >= num2 && num1 >= num3)
+          System.out.println(num1+" is the largest Number");
+
+      else if (num2 >= num1 && num2 >= num3)
+          System.out.println(num2+" is the largest Number");
+
+      else
+          System.out.println(num3+" is the largest Number");
+  }
+}
+
+
+
+
+using ternary operator
+
+import java.util.Scanner;
+public class JavaExample 
+{
+    public static void main(String[] args) 
+    {
+        int num1, num2, num3, result, temp;
+        /* Scanner is used for getting user input. 
+         * The nextInt() method of scanner reads the
+         * integer entered by user.
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter First Number:");
+        num1 = scanner.nextInt();
+        System.out.println("Enter Second Number:");
+        num2 = scanner.nextInt();
+        System.out.println("Enter Third Number:");
+        num3 = scanner.nextInt();
+        scanner.close();
+       
+        
+        /* In first step we are comparing only num1 and
+         * num2 and storing the largest number into the
+         * temp variable and then comparing the temp and
+         * num3 to get final result.
+         */
+        temp = num1>num2 ? num1:num2;
+        result = num3>temp ? num3:temp;
+        System.out.println("Largest Number is:"+result);
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------
+14.	Program to check that entered year is a leap year or not.
+
+import java.util.Scanner;
+
+public class LeapYearUsingIf {
+	private static Scanner sc;
+
+	public static void main(String[] args) {
+		int year;
+		sc = new Scanner(System.in);
+		
+		System.out.println("\n Please Enter any year you wish: ");
+		year = sc.nextInt();
+		
+		if (( year%400 == 0)|| (( year%4 == 0 ) &&( year%100 != 0))) {
+			System.out.format("\n %d is a Leap Year. \n", year);
+		}
+		else {
+			System.out.format("\n %d is NOT a Leap Year. \n", year);
+		}
+	}
+}
+-----------------------------------------------------------------------------------------------------
+
+15.	Accept person’s gender (character m for male and f for female), age (integer), as input and then check whether person is eligible for marriage or not.
+
+
+
+-----------------------------------------------------------------------------------------------------
+16.	Write a program to print table of any entered number using loop.
+
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+
+        int num = 5;
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+        }
+    }
+}
+
+
+using while loop
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+
+        int num = 9, i = 1;
+        while(i <= 10)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+            i++;
+        }
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------
+17.	Write a program to reverse a given number.
+public class ReverseNumber {
+
+    public static void main(String[] args) {
+
+        int num = 1234, reversed = 0;
+
+        while(num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        System.out.println("Reversed Number: " + reversed);
+    }
+}
+-----------------------------------------------------------------------------------------------------
+18.	Program to check whether number is prime or not.
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 29;
+        boolean flag = false;
+        for(int i = 2; i <= num/2; ++i)
+        {
+            // condition for nonprime number
+            if(num % i == 0)
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
+}
+-----------------------------------------------------------------------------------------------------
+19.	Calculate  series : 12+22+32+42+.........+n2
+import java.util.Scanner;
+
+public class Main {
+
+    
+    static void println(String string) {
+        System.out.println(string);
+    }
+
+    static void print(String string) {
+        System.out.print(string);
+    }
+
+    
+    static void printSeries(int n, int total) {
+        int i = 1;
+        for (i = 1; i < n; i++) {
+            print(i + "^2 +");
+        }
+        print(i + "^2 = " + total);
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //get value of n from user
+        println("Enter value of 'n' : ");
+        int n = scanner.nextInt();
+
+        //calculate the sum of the series
+        int sum = (n * (n + 1) * (2 * n + 1 )) / 6;
+
+        //print the series
+        printSeries(n,sum);
+
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------
+20.	Print all prime numbers between two given numbers. [ break continue ]
+
+
+
+-----------------------------------------------------------------------------------------------------
+21.	Program to show sum and average of 10 element array. Accept array elements from user. 
+
+
+
+-----------------------------------------------------------------------------------------------------
+22.	Sort a ten element array in descending order.
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+23.	Write a program to reverse the array elements.
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+24.	Write a program to search an element in the array.
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+25.	Write the program to find the sum of even elements and sum of odd elements present in the array of integer type.
+
+
+
+-----------------------------------------------------------------------------------------------------
+26.	Create an array of 17 elements in 5 rows.  And calculate sum of all elements.
+-----------------------------------------------------------------------------------------------------
+
+27.	Write a program to fine the smallest and greatest number present in the array of integer type.
+-----------------------------------------------------------------------------------------------------
+28.	Initialize one String type of array and print the elements using for each loop.
+-----------------------------------------------------------------------------------------------------
+29.	Write a program to print the total number of one-D arrays in a two-D array and the number of elements in every one-D array present in the two-D arrays.
+-----------------------------------------------------------------------------------------------------
+30.	Create an integer type 2-D array of size [3X3]. Take the elements from the user and then calculate the sum of the elements present in the diagonal.
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+31.	Create a class Student with 2 data members rno and name. Create one method setData() that takes roll number and student name as parameter and stores them in data members rno and name. Create one more method showData() to print the data member values. Create another class ( main class) StudentDemo that creates Student class object and calls setData() and showData() methods.
+-----------------------------------------------------------------------------------------------------
+32.	Modify the above program (no. 30) to count the no of Student objects created. [ In this program static variable is required ]
+
+
+
+-----------------------------------------------------------------------------------------------------
+33.	Write a program to demonstrate functionalities of this keyword in java. 
